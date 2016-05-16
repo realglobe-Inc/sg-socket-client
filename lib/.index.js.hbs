@@ -1,0 +1,16 @@
+/**
+ * {{pkg.description}}
+ * @module {{pkg.name}}
+ * @version {{pkg.version}}
+ */
+'use strict'
+
+const sgSocketClient = require('./sg_socket_client')
+
+let lib = sgSocketClient.bind(this)
+
+Object.assign(lib, sgSocketClient, {
+  sgSocketClient
+})
+
+module.exports = lib
