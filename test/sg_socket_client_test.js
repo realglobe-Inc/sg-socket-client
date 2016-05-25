@@ -27,6 +27,8 @@ describe('sg-socket-client', function () {
       socket.on('connect', () => {
         resolve()
       })
+      socket.lock()
+      socket.unlock()
     })
   }))
 })
