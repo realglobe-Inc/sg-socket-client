@@ -16,8 +16,8 @@ describe('sg-socket-client', function () {
   before(() => co(function * () {
     wsServer = sgSocket(port)
     wsServer.on('connection', (socket) => {
-      socket.on('test:ping', (data) => {
-        socket.emit('test:pong', data)
+      socket.on('test:ping', (data, callback) => {
+        callback({ state: 'success' })
       })
     })
   }))
@@ -39,10 +39,8 @@ describe('sg-socket-client', function () {
 
   it('Use async call', () => co(function * () {
     let socket = sgSocketClient(`http://localhost:${port}`)
-    let pong = yield socket.call('test:ping', { name: 'hoge' }, {
-      expect: 'test:pong'
-    })
-    assert.deepEqual(pong, { name: 'hoge' })
+    let pong = yield socket.call('test:ping', { name: 'hoge' })
+    assert.deepEqual(pong, { state: 'success' })
   }))
 
   it('Use async call with timeout', () => co(function * () {
