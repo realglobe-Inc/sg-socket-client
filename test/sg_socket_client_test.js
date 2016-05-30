@@ -27,14 +27,11 @@ describe('sg-socket-client', function () {
   }))
 
   it('Sg socket client', () => co(function * () {
-    yield new Promise((resolve) => {
-      let socket = sgSocketClient(`http://localhost:${port}`)
-      socket.on('connect', () => {
-        resolve()
-      })
-      socket.lock()
-      socket.unlock()
-    })
+    let socket = sgSocketClient(`http://localhost:${port}`)
+    yield socket.waitToConnect()
+    yield socket.waitToConnect() // Could be call twice
+    yield socket.lock()
+    yield socket.unlock()
   }))
 
   it('Use async call', () => co(function * () {
@@ -51,6 +48,7 @@ describe('sg-socket-client', function () {
       assert.ok(err)
     })
   }))
+
 })
 
 /* global describe, before, after, it */
