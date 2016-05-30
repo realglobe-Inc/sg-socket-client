@@ -44,6 +44,15 @@ describe('sg-socket-client', function () {
     })
     assert.deepEqual(pong, { name: 'hoge' })
   }))
+
+  it('Use async call with timeout', () => co(function * () {
+    let socket = sgSocketClient(`http://localhost:${port}`)
+    yield socket.call('test:no_res', { name: 'hoge' }, {
+      timeout: 10
+    }).catch((err) => {
+      assert.ok(err)
+    })
+  }))
 })
 
 /* global describe, before, after, it */
