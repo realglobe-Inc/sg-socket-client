@@ -4,7 +4,7 @@
  */
 'use strict'
 
-const wrapExtension = require('../lib/extensions/wrap_extension.js')
+const WrapExtension = require('../lib/extensions/wrap_extension.js')
 const assert = require('assert')
 const co = require('co')
 
@@ -18,7 +18,7 @@ describe('wrap-extension', () => {
   }))
 
   it('Wrap extension', () => co(function * () {
-
+    assert.ok(WrapExtension)
   }))
 })
 
