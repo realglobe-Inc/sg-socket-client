@@ -19,6 +19,10 @@ describe('sg-socket-client', function () {
       socket.on('test:ping', (data, callback) => {
         callback({ state: 'success' })
       })
+      socket.on('testing:foo:bar', (data, callback) => {
+        callback({ msg: 'this is foo bar', received: data })
+        socket.emit('testing:foo:baz', { baz: 'bazz' })
+      })
     })
   }))
 
@@ -49,6 +53,20 @@ describe('sg-socket-client', function () {
     })
   }))
 
+  it('Use wrap call', () => co(function * () {
+    let socket = sgSocketClient(`http://localhost:${port}`).wrap('testing:foo')
+
+    let result = yield socket.call('bar', { hoge: 'fuge' })
+    assert.deepEqual(result.received, { hoge: 'fuge' })
+
+    yield new Promise((resolve) => {
+      socket.on('baz', (data) => {
+        assert.deepEqual(data, { baz: 'bazz' })
+        resolve()
+      })
+      socket.call('bar', { hoge: 'fuge' })
+    })
+  }))
 })
 
 /* global describe, before, after, it */
