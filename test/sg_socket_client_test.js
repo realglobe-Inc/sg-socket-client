@@ -67,6 +67,10 @@ describe('sg-socket-client', function () {
       socket.call('bar', { hoge: 'fuge' })
     })
   }))
+  
+  it('Call pubsub', () => co(function *(){
+    
+  }))
 })
 
 /* global describe, before, after, it */
