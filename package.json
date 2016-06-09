@@ -24,7 +24,7 @@
   "dependencies": {
     "co": "^4.6.0",
     "debug": "^2.2.0",
-    "sg-socket-constants": "^1.2.4",
+    "sg-socket-constants": "^1.2.10",
     "socket.io-client": "^1.4.6"
   },
   "devDependencies": {
@@ -38,7 +38,7 @@
     "ape-updating": "^3.0.2",
     "coz": "^6.0.2",
     "injectmock": "^2.0.0",
-    "sg-socket": "^1.0.9"
+    "sg-socket": "^1.0.10"
   },
   "engines": {
     "node": ">=6",
