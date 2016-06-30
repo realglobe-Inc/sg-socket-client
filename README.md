@@ -126,6 +126,8 @@ This software is released under the [MIT License](https://github.com/realglobe-I
 Links
 ------
 
-+ [socket.io-client](https://github.com/socketio/socket.io-client#readme)
++ [socket.io-client][socket_io_client_url]
+
+[socket_io_client_url]: https://github.com/socketio/socket.io-client#readme
 
 <!-- Links End -->

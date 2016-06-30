@@ -31,3 +31,5 @@ node_modules
 tmp
 
 .npmrc
+
+sims/browser
