@@ -32,4 +32,4 @@ tmp
 
 .npmrc
 
-sims/browser
+shim/browser
