@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/realglobe-Inc/sg-socket-client#readme",
   "dependencies": {
+    "asenv": "^1.0.4",
     "co": "^4.6.0",
     "debug": "^2.2.0",
     "sg-socket-constants": "^1.3.6",
