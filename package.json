@@ -6,6 +6,7 @@
   "browser": "shim/browser",
   "scripts": {
     "test": "./ci/test.js",
+    "test-karma": "karma start",
     "prepublish": "./ci/build.js && ./ci/browser.js"
   },
   "repository": "realglobe-Inc/sg-socket-client",
@@ -44,6 +45,7 @@
     "coz": "^6.0.16",
     "filedel": "^2.0.4",
     "injectmock": "^2.0.0",
+    "sg-karma": "^1.0.2",
     "sg-socket": "^1.0.13",
     "sg-travis": "^1.1.25"
   },
