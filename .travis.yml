@@ -14,7 +14,7 @@ install:
 script:
 - ./ci/build.js
 - ./ci/test.js
-- npm run test-karma
+- ./ci/test_browser.js
 - ./ci/cover.js
 - ./ci/report.js
 after_success:

@@ -6,7 +6,7 @@
   "browser": "shim/browser",
   "scripts": {
     "test": "./ci/test.js",
-    "test-karma": "karma start",
+    "test:browser": "./ci/test_browser.js",
     "prepublish": "./ci/build.js && ./ci/browser.js"
   },
   "repository": "realglobe-Inc/sg-socket-client",

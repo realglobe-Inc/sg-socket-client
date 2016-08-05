@@ -4,30 +4,19 @@
  */
 'use strict'
 
-const sgSocket = require('sg-socket')
 const sgSocketClient = require('../shim/browser/sg_socket_client.js')
 const assert = require('assert')
 const co = require('co')
 
 describe('sg-socket-client', function () {
   this.timeout(4000)
-  let wsServer
-  let port = 9876
+  let port = 8888
   before(() => co(function * () {
-    wsServer = sgSocket(port)
-    wsServer.on('connection', (socket) => {
-      socket.on('test:ping', (data, callback) => {
-        callback({ state: 'success' })
-      })
-      socket.on('testing:foo:bar', (data, callback) => {
-        callback({ msg: 'this is foo bar', received: data })
-        socket.emit('testing:foo:baz', { baz: 'bazz' })
-      })
-    })
+
   }))
 
   after(() => co(function * () {
-    wsServer.close()
+
   }))
 
   it('Sg socket client', () => co(function * () {
@@ -67,9 +56,9 @@ describe('sg-socket-client', function () {
       socket.call('bar', { hoge: 'fuge' })
     })
   }))
-  
-  it('Call pubsub', () => co(function *(){
-    
+
+  it('Call pubsub', () => co(function * () {
+
   }))
 })
 

@@ -5,5 +5,5 @@
 // To use Promise in browser
 const babelPolyfill = require('babel-polyfill')
 
-const testsContext = require.context('.', true, /_test.karma.js$/)
+const testsContext = require.context('.', true, /test.karma.js$/)
 testsContext.keys().forEach(testsContext)
