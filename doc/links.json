@@ -1,3 +1,5 @@
 {
-  "socket.io-client": "https://github.com/socketio/socket.io-client#readme"
+  "socket.io-client": "https://github.com/socketio/socket.io-client#readme",
+  "SUGOS": "https://github.com/realglobe-Inc/sugos",
+  "Realglobe, Inc": "http://realglobe.jp"
 }
