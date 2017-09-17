@@ -1,6 +1,6 @@
 {
   "name": "sg-socket-client",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Web socket client for SUGOS",
   "main": "lib",
   "browser": "shim/browser",
