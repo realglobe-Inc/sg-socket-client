@@ -6,20 +6,20 @@
 
 const LockExtension = require('../shim/browser/extensions/lock_extension.js')
 const assert = require('assert')
-const co = require('co')
+
 
 describe('lock-extension', () => {
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Lock extension', () => co(function * () {
+  it('Lock extension', async () => {
     assert.ok(LockExtension)
-  }))
+  })
 })
 
 /* global describe, before, after, it */

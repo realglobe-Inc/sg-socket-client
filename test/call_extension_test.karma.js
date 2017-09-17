@@ -6,20 +6,20 @@
 
 const CallExtension = require('../shim/browser/extensions/call_extension.js')
 const assert = require('assert')
-const co = require('co')
+
 
 describe('call-extension', () => {
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Call extension', () => co(function * () {
+  it('Call extension', async () => {
     assert.ok(CallExtension)
-  }))
+  })
 })
 
 /* global describe, before, after, it */
