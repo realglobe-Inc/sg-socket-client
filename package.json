@@ -39,6 +39,8 @@
     "ape-tasking": "^4.0.8",
     "ape-tmpl": "^6.0.1",
     "ape-updating": "^4.1.1",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
     "coz": "^6.0.16",
     "filedel": "^4.0.0",
     "injectmock": "^2.0.0",
